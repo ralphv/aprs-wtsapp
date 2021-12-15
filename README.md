@@ -6,6 +6,7 @@
 * [Limitations](#limitations)
 * [Error messages](#error-messages)
 * [Reliability](#reliability)
+* [Availability](#availability)
 * [Responsibility and privacy](#responsibility-and-privacy)
 * [Disclaimer](#disclaimer)
 * [Contact](#contact)
@@ -77,6 +78,9 @@ Once an initial message establish a destination by the use of @, subsequent mess
 * `Invalid set alias command body` You tried to use the set alias command but the message was not properly formatted.
 * `Invalid remove alias command body` You tried to use the remove alias command but the message was not properly formatted.
 * `No active session found for incoming from` The WhatsApp user replied to WTSAPP Gateway but there was no active conversation. Conversations must be initiated by the radio user and converstations remain active for one hour to allow replies.
+
+## Availability
+* Currently this is a personal project with a personal small budget set aside. I have to pay for each WhatsApp message that goes out. If the costs start getting out of budget, I may limit the rates more or might start asking for donations to cover these costs. 
 
 ## Reliability
 * APRS is not always within reach, there are areas without coverage. The gateway responds with `status` messages on both ends. Watch for them. 
