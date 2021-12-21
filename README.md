@@ -24,13 +24,13 @@
     
 ## How to use it
 
-The simplest use case is to send an APRS message to the destination `WTSAPP` with a message starting with the `@` sign, followed by the phone number, then a space and followed by the message.
+The simplest use case is to send an APRS message to the destination `WTSAPP` with a message starting with the `@` sign, followed by the phone number, then a space and followed by the message. It is best to use the number in international format (starting with + sign) otherwise it will be assumed it is a US based number. Numbers can have dashes as well.
 
 __Example__
 
 ```
     To: WTSAPP
-    Message: @123-456-7890 this is my message.
+    Message: @+123-456-7890 this is my message.
 ```
 
 The following commands are also available. Commands start with the `#` sign
@@ -39,7 +39,7 @@ The following commands are also available. Commands start with the `#` sign
 
 ```
     To: WTSAPP
-    Message: #SET me @123-456-7890
+    Message: #SET me @+1234567890
 ```
 
 Now sending a message can be done by using an alias instead of a phone number
