@@ -1,7 +1,7 @@
 # [APRS-WTSAPP](https://wtsapp.org) - APRS to WhatsApp Radio Gateway for Amateur Radio
 
 * [What is it](#what-is-it)
-* [Current Status](#current-status)
+* [Current Status and updates](#current-status-and-updates)
 * [How to use it](#how-to-use-it)
 * [Limitations](#limitations)
 * [Error messages](#error-messages)
@@ -17,9 +17,10 @@
 * WTSAPP is an APRS Gateway designed to allow Licenced Radio Amateurs around the world reach their loved ones from their radios by using [APRS messages](http://www.aprs.org/).
 * This is very similar to the gateway SMSGTE, that allows communication to text messages.
 
-## Current status
+## Current status and updates
 
-Currently this is being developed/tested and is in __[closed beta]__.
+* 12/20/2021 - Fix for dashes in numbers and open for public as beta.
+* Currently, this is being developed/tested and is in __[closed beta]__.
     
 ## How to use it
 
@@ -66,9 +67,9 @@ Once an initial message establish a destination by the use of @, subsequent mess
 ```
 ## Limitations
 
-* Rate limiter per callsign -> 50 messages / 10 minutes
+* Rate limiter per call sign -> 50 messages / 10 minutes
 * Rate limiter for server -> There is also a rate limit for the whole service for all the users using it.
-* Rate limiter for replies -> WhatsApp users can reply with a maxium rate of 50 messages / 10 minutes
+* Rate limiter for replies -> WhatsApp users can reply with a maximum rate of 50 messages / 10 minutes
 
 ## Error messages
 
@@ -77,19 +78,24 @@ Once an initial message establish a destination by the use of @, subsequent mess
 * `Invalid command` You sent a message starting with `#` sign but doesn't match any of the commands known.
 * `Invalid set alias command body` You tried to use the set alias command but the message was not properly formatted.
 * `Invalid remove alias command body` You tried to use the remove alias command but the message was not properly formatted.
-* `No active session found for incoming from` The WhatsApp user replied to WTSAPP Gateway but there was no active conversation. Conversations must be initiated by the radio user and converstations remain active for one hour to allow replies.
+* `No active session found for incoming from` The WhatsApp user replied to WTSAPP Gateway but there was no active conversation. Conversations must be initiated by the radio user and conversations remain active for one hour to allow replies.
 
 ## Availability
-* Currently this is a personal project with a personal small budget set aside. I have to pay for each WhatsApp message that goes out. If the costs start getting out of budget, I may limit the rates more or might start asking for donations to cover these costs. 
+* This is a personal project with a personal small budget set aside. I could not secure a WhatsApp business account because it needs a registered company that can be verified by Facebook. If the number I am using starts getting a lot of traffic, WhatsApp may ban it. 
+* Recipients should add the number as a contact to help against banning this service.
 
 ## Reliability
-* APRS is not always within reach, there are areas without coverage. The gateway responds with `status` messages on both ends. Watch for them. 
-* Try not to send too many messages, this service is intended to `stay in touch` or `check in` during limited connectivity, it is not intended to create a full day to day conversations. Please use it sparingly.
+* Radio communication may be affected by weather conditions.
+* APRS is not always within reach, there are areas without coverage. The gateway responds with `status` messages on both ends. Watch for them.
+* My software may contain bugs and probably does.
+* My software may lose Internet connectivity, or the services to send WhatsApp via API may be down, or the APRS-IS network may be down.
+* Try not to send too many messages, this service is intended to `stay in touch` or `check in` during limited connectivity, it is not intended to create a full day-to-day conversations. Please use it sparingly.
 * Send one message at a time and wait for delivery confirmations, both APRS -> WhatsApp and WhatsApp -> APRS.
+* **DO NOT Rely** on this service for emergency use or as a reliable means of contact when you are out of reach. At best, it should be a redundant mean. Other means like a satellite phone, Garmin inReach, PLB and the likes are to be used if you are far from civilization. 
 
 ## Responsibility and privacy
-* When you use this service as a Licensed Ham, you are 100% responsible for abiding by the FCC Rules or the equivalent Rules of your country. You are 100% responsible for the contents of your messages and the their destination.
-* When using APRS and radio, you have zero privacy when it comes to your messages and their contents. Furthermore some websites keep a history or database of all the APRS messages sent worldwide.
+* When you use this service as a Licensed Ham, you are 100% responsible for abiding by the FCC Rules or the equivalent Rules of your country. You are 100% responsible for the contents of your messages and their destination.
+* When using APRS and radio, you have zero privacy when it comes to your messages and their contents. Furthermore, some websites keep a history or database of all the APRS messages sent worldwide.
 * Since this is a radio amateur service, you can not use this service for any commercial or business related purposes. This should only be used for non-profit and purely for personal usage, as is the case with everything Amateur Radio related.
 
 ## Disclaimer
@@ -99,6 +105,8 @@ THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT REPRESENTAT
 IN NO EVENT WILL I BE LIABLE TO YOU FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, OR LOST PROFITS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES, INCLUDING THOSE ARISING FROM OR RELATING TO CONTENT MADE AVAILABLE ON THE SERVICES THAT IS ALLEGED TO BE DEFAMATORY, OFFENSIVE, OR ILLEGAL. ACCESS TO, AND USE OF, THE SERVICES IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR DEVICE OR COMPUTER SYSTEM, OR RESULTING LOSS OF DATA.
 
 ## Contact
-Please find me at this [Facebook page](https://facebook.com/aprs.wtsapp)
+Best place to discuss this is at this reddit community [r/aprs_wtsapp](https://reddit.com/r/aprs_wtsapp)
+You can also email me at wtsapp [at] wtsapp.org
+Please forgive me if I don't reply immediately, this is a side project with limited time.
 
 By KC1QCQ
