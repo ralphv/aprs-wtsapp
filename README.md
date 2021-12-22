@@ -25,7 +25,7 @@
     
 ## How to use it
 
-###The 3 formats of the messages:
+##The 3 formats of the messages:
 
 ```
 [@][phone number/alias] [message body]
@@ -96,12 +96,12 @@ __Note__: If you are sending messages to *multiple recipients* at the same time,
     To: WTSAPP
     Message: this is a follow up message
 ```
-###The format of the numbers:
+##The format of the numbers:
 
 Phone numbers must be numeric. They can contain dashes `-` and they can start with international format using the `+` sign, otherwise it will be considered a USA based number.
 Numbers not correctly formatted will cause an error.
 
-###The format of the aliases:
+##The format of the aliases:
 
 Aliases can be any single word format. However, if it looks exactly like a phone number it will be considered invalid.
 Aliases not correctly formatted will cause an error.
