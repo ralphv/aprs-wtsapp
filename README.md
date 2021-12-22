@@ -19,37 +19,65 @@
 
 ## Current status and updates
 
+* 12/22/2021 - Revamped this page to make the documentation clearer.
 * 12/20/2021 - Fix for dashes in numbers and open for public as beta.
 * Currently, this is being developed/tested and is in __[closed beta]__.
     
 ## How to use it
 
-The simplest use case is to send an APRS message to the destination `WTSAPP` with a message starting with the `@` sign, followed by the phone number, then a space and followed by the message. It is best to use the number in international format (starting with + sign) otherwise it will be assumed it is a US based number. Numbers can have dashes as well.
+###The 3 formats of the messages:
 
-__Example__
+```
+[@][phone number/alias] [message body]
+[#][command] [command body]
+[follow up messages, coversation mode]
+```
+
+* The first letter when it's an `@` sign will indicate a command to send messages:
+It should be followed by a phone number or an alias.
+
+__Example__: Sending a message "this is my message" to the international phone number `+123-456-7890`
 
 ```
     To: WTSAPP
-    Message: @+123-456-7890 this is my message.
+    Message: @+123-456-7890 this is my message
+```
+OR without dashes
+```
+    To: WTSAPP
+    Message: @+1234567890 this is my message
 ```
 
-The following commands are also available. Commands start with the `#` sign
-
-* Set Alias for a phone number
+__Example__: Sending a message "this is my message" to the phone number `123-456-7890` This will be considered as a USA number.
 
 ```
     To: WTSAPP
-    Message: #SET me @+1234567890
+    Message: @123-456-7890 this is my message
+```
+OR without dashes
+```
+    To: WTSAPP
+    Message: @1234567890 this is my message
 ```
 
-Now sending a message can be done by using an alias instead of a phone number
+__Example__: Sending a message "this is my message" to the alias `me`
 
 ```
     To: WTSAPP
-    Message: @me this is my message.
+    Message: @me this is my message
 ```
 
-* Remove an alias
+* The first letter when it's an `#` sign this indicates a command. Currently, there are two commands. 
+One `SET` to set or create an alias. One `RM` to remove an alias.
+
+__Example__: Creating an alias called `me` with the international number +123-456-7890
+
+```
+    To: WTSAPP
+    Message: #SET me +123-456-7890
+```
+
+__Example__: Removing an alias called `me`
 
 ```
     To: WTSAPP
@@ -58,13 +86,26 @@ Now sending a message can be done by using an alias instead of a phone number
 
 * Conversation mode
 
-Once an initial message establish a destination by the use of @, subsequent messages don't need the destination anymore.
+Once an initial message establishes a destination by the use of `@` Subsequent messages to the *same destination* don't need the destination anymore.
 
+__Example__: Sending a message "this is a follow up message" to the destination used before. 
+The session time is 1 hour, after that conversation mode will not work, and you will need to use the `@` sign again to establish a destination.
+__Note__: If you are sending messages to *multiple recipients* at the same time, you should always use the `@` sign.
 
 ```
     To: WTSAPP
-    Message: this is a follow up message, will send to the destination used.
+    Message: this is a follow up message
 ```
+###The format of the numbers:
+
+Phone numbers must be numeric. They can contain dashes `-` and they can start with international format using the `+` sign, otherwise it will be considered a USA based number.
+Numbers not correctly formatted will cause an error.
+
+###The format of the aliases:
+
+Aliases can be any single word format. However, if it looks exactly like a phone number it will be considered invalid.
+Aliases not correctly formatted will cause an error.
+
 ## Limitations
 
 * Rate limiter per call sign -> 50 messages / 10 minutes
