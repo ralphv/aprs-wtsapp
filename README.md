@@ -19,6 +19,7 @@
 
 ## Current status and updates
 
+* 12/25/2021 - Major new release, added MongoDB as DB and bug fixes.
 * 12/22/2021 - Revamped this page to make the documentation clearer.
 * 12/20/2021 - Fix for dashes in numbers and open for public as beta.
 * Currently, this is being developed/tested and is in __[closed beta]__.
