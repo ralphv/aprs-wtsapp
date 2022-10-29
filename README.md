@@ -20,6 +20,7 @@
 
 ## Current status and updates
 
+* 29/10/2022 - Using a different library for delivering messages, should be faster and more reliable.
 * 01/04/2022 - Using aliases for APRS messages instead of number.
 * 12/25/2021 - Major new release, added MongoDB as DB and bug fixes.
 * 12/22/2021 - Revamped this page to make the documentation clearer.
