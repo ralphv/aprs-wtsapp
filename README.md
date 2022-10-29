@@ -39,6 +39,7 @@ __The 3 formats of the messages:__
 
 * The first letter when it's an `@` sign will indicate a command to send messages:
 It should be followed by a phone number or an alias.
+* The phone number **MUST BE** in international format, otherwise it won't work. This means it **MUST START** with the country code.
 
 __Example__: Sending a message "this is my message" to the international phone number `+123-456-7890`
 
@@ -50,18 +51,6 @@ OR without dashes
 ```
     To: WTSAPP
     Message: @+1234567890 this is my message
-```
-
-__Example__: Sending a message "this is my message" to the phone number `123-456-7890` This will be considered as a USA number.
-
-```
-    To: WTSAPP
-    Message: @123-456-7890 this is my message
-```
-OR without dashes
-```
-    To: WTSAPP
-    Message: @1234567890 this is my message
 ```
 
 __Example__: Sending a message "this is my message" to the alias `me`
