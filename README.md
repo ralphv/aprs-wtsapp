@@ -11,6 +11,7 @@
 * [Disclaimer](#disclaimer)
 * [Thanks](#thanks)
 * [Contact](#contact)
+* [Donation](#donation)
 
 
 ## What is it
@@ -20,6 +21,7 @@
 
 ## Current status and updates
 
+* 11/07/2022 - Couple of bug fixes.
 * 29/10/2022 - Using a different library for delivering messages, should be faster and more reliable.
 * 01/04/2022 - Using aliases for APRS messages instead of number.
 * 12/25/2021 - Major new release, added MongoDB as DB and bug fixes.
@@ -32,13 +34,13 @@
 __The 3 formats of the messages:__
 
 ```
-[@][phone number/alias] [message body]
+[@][international phone number/alias] [message body]
 [#][command] [command body]
 [follow up messages, coversation mode]
 ```
 
 * The first letter when it's an `@` sign will indicate a command to send messages:
-It should be followed by a phone number or an alias.
+It should be followed by an international phone number or an alias.
 * The phone number **MUST BE** in international format, otherwise it won't work. This means it **MUST START** with the country code.
 
 __Example__: Sending a message "this is my message" to the international phone number `+123-456-7890`
@@ -145,5 +147,13 @@ Special thanks to VK3TMO for extensive testing and finding many bugs.
 Best place to discuss this is at this reddit community [r/aprs_wtsapp](https://reddit.com/r/aprs_wtsapp)
 You can also email me at wtsapp [at] wtsapp.org
 Please forgive me if I don't reply immediately, this is a side project with limited time.
+
+## Donation
+Anything helps with the server and service fees.
+Thanks.
+
+[![button](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A7G3QV4MTNTF6)
+
+
 
 By KC1QCQ
