@@ -1,5 +1,6 @@
 # [APRS-WTSAPP](https://wtsapp.org) - APRS to WhatsApp Radio Gateway for Amateur Radio
 
+* [Status](#status)
 * [What is it](#what-is-it)
 * [Current Status and updates](#current-status-and-updates)
 * [How to use it](#how-to-use-it)
@@ -14,6 +15,10 @@
 * [Donation](#donation)
 
 
+## Status
+
+[Status page here](https://stats.uptimerobot.com/OkNkjcNmBX)
+
 ## What is it
 
 * WTSAPP is an APRS Gateway designed to allow Licenced Radio Amateurs around the world reach their loved ones from their radios by using [APRS messages](http://www.aprs.org/).
@@ -21,6 +26,7 @@
 
 ## Current status and updates
 
+* 11/13/2022 - Adding a status page.
 * 11/07/2022 - Couple of bug fixes.
 * 29/10/2022 - Using a different library for delivering messages, should be faster and more reliable.
 * 01/04/2022 - Using aliases for APRS messages instead of number.
