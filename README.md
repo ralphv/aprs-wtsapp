@@ -16,6 +16,7 @@
 
 
 ## Status
+<span style="background-color:green">ONLINE</span>
 
 [Status page here](https://stats.uptimerobot.com/OkNkjcNmBX)
 
